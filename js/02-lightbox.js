@@ -18,13 +18,11 @@ const allItems = galleryItems
 
 galleryList.insertAdjacentHTML("beforeend", allItems);
 
-function onClick(e) {
-    e.preventDefault();
-    const galleryImage = new SimpleLightbox(".gallery a", {
-        captionsData: "alt",
-        captionDelay: 250,
-        navText: ["<", ">"],
-    });
-}
 
-galleryList.addEventListener("click", onClick);
+const glightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+  navText: ["<", ">"],
+});
+
+
